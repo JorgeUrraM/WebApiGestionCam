@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApiGestionCamionetas.Context;
 using WebApiGestionCamionetas.Entities;
+using WebApiGestionCamionetas.ViewModels;
 
 namespace WebApiGestionCamionetas.Controllers
 {
@@ -35,9 +36,9 @@ namespace WebApiGestionCamionetas.Controllers
         [HttpPost]
         // POST: api/Usuario
         //[HttpPost]
-        public Usuario Login(string Email, string Password)
+        public Usuario Login([FromBody] LoginCred credenciales)
         {
-            return context.Usuario.FirstOrDefault(u => u.Email == Email && u.Password == Password);
+            return context.Usuario.FirstOrDefault(u => u.Email == credenciales.Email && u.Password == credenciales.Password);
         }
 
         //// PUT: api/Usuario/5
