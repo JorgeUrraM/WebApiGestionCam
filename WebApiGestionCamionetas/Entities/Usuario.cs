@@ -12,6 +12,7 @@ namespace WebApiGestionCamionetas.Entities
         public int IdUsuario { get; set; }
         public string NombreCompleto { get; set; }
         public string Email { get; set; }
+        public string Password { get; set; }
         public bool LicenciaInterna { get; set; }
         public bool LicenciaMunicipal { get; set; }
     }

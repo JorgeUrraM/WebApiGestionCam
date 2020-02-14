@@ -31,12 +31,14 @@ namespace WebApiGestionCamionetas.Controllers
         {
             return context.Usuario.FirstOrDefault(u=>u.IdUsuario == id);
         }
-
-        //// POST: api/Usuario
+        
+        [HttpPost]
+        // POST: api/Usuario
         //[HttpPost]
-        //public void Post([FromBody] string value)
-        //{
-        //}
+        public Usuario Login([FromBody]string email, string password)
+        {
+            return context.Usuario.FirstOrDefault(u => u.Email == email && u.Password == password);
+        }
 
         //// PUT: api/Usuario/5
         //[HttpPut("{id}")]
