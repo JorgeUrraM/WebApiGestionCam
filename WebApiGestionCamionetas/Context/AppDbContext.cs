@@ -15,5 +15,10 @@ namespace WebApiGestionCamionetas.Context
         }
 
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<DescFatiga> DescFatiga { get; set; }
+        public DbSet<DescSomnolencia> DescSomnolencia { get; set; }
+        public DbSet<DescEstadoCamioneta> DescEstadoCamioneta { get; set; }
+
+
     }
 }
