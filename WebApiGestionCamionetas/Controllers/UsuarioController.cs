@@ -35,9 +35,9 @@ namespace WebApiGestionCamionetas.Controllers
         [HttpPost]
         // POST: api/Usuario
         //[HttpPost]
-        public Usuario Login([FromBody]string email, string password)
+        public Usuario Login(string Email, string Password)
         {
-            return context.Usuario.FirstOrDefault(u => u.Email == email && u.Password == password);
+            return context.Usuario.FirstOrDefault(u => u.Email == Email && u.Password == Password);
         }
 
         //// PUT: api/Usuario/5
